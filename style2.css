@@ -1,0 +1,76 @@
+/* Importar as fontes de um outro lugar, nesse caso, Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* Aplicar as fontes acima em todo o <body> */
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Quando usamos o boxmodel, as bordas acabam engordando o 
+conteúdo, passando de seu tamanho original. Usando box-sizing,
+acabamos com este problema. * significa aplicar isso em todo o 
+código html. */
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+section#login-box {
+    background-color: orange;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+}
+
+form#login-form input {
+    width: 350px;
+    height: 40px;
+    font-size: 0.9em;
+    border: 1px solid lightgray;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+form#login-form input:focus {
+    background-color: lightcyan;
+}
+
+form#login-form button {
+    padding: 6px;
+    width: 80px;
+    margin-top: 20px;
+    border-radius: 3px;
+    outline: none;
+}
+
+section#login-box footer {
+    margin: 20px;
+}
+
+section#stylesSec {
+    position: fixed;
+    bottom: 0;
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+ul#stylesUl {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+ul#stylesUl li {
+    display: inline-block;
+    list-style-image: none;
+}

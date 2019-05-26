@@ -1,40 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> 
-   <!-- <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style2.css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <link id="linkStyle" rel="stylesheet" href="">
+    <link id="linkBootstrap" rel="stylesheet" href="">
+    <title>Tela HTML/CSS</title>
 </head>
 <body>
-    <section class ="container" id="login-box">
-        <header class="login-header">
+    <section id="login-box" class="col-md-3 text-center">
+        <header>
             <h1>Login</h1>
         </header>
         <form id="login-form">
-            <input type="email" name="email" id="email" placeholder="Login ou Email">
-            <input type="password" name="senha" id="senha" placeholder="Senha">
-            <button type="submit">Acessar</button>
+            <div class="form-group">
+                <input type="email" id="email" class="form-control" placeholder="Login ou Email">
+            </div>
+            <div class="form-group">
+                <input type="password" id="senha" class="form-control" placeholder="Senha">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-block btn-success font-weight-bold">Acessar</button>
+            </div>
         </form>
-        <footer class="login-footer">
-            <span class="label label-warning">Não possui uma conta?</span>
+        <footer class="text-left">
+            <a href="">Não possui uma conta?</a>
         </footer>
     </section>
-    <nav class="navbar navbar-default" id="stylesSec">
-        <div class="container-fluid">
-            <header class="navbar-header">
-                <span class="navbar-brand">Estilos</span>
-            </header>
-            <ul class="nav navbar-nav" id="stylesUl">
-                <li><button type="button" id="btn1">HTML Puro</button></li>
-                <li><button type="button" id="btn2">CSS 1</button></li>
-                <li><button type="button" id="btn3">CSS 2</button></li>
-                <li><button type="button" id="btn4">Bootstrap 1</button></li>
-                <li><button type="button" id="btn5">Bootstrap 2</button></li>
-            </ul>
-        </div>
-    </nav>
+
+    <section id="stylesSec">
+        <header id="stylesHeader" class="text-center font-weight-bold">
+            <span>Estilos</span>
+        </header>
+        <ul id="stylesUl" class="list-inline">
+            <li class="list-inline-item"><button value="0">HTML Puro</button></li>
+            <li class="list-inline-item"><button value="1">CSS</button></li>
+            <li class="list-inline-item"><button value="2">Bootstrap</button></li>
+        </ul>
+    </section>
+
+    <script>
+        // função para trocar estilos
+        document.querySelector('#stylesUl').addEventListener('click', function(e){
+            var valor = e.target.value;
+            var linkStyle = document.querySelector('#linkStyle');
+            var linkBootstrap = document.querySelector('#linkBootstrap');
+
+            if(valor == 0) {
+                linkStyle.href = '';
+                linkBootstrap.href = '';
+            } else if(valor == 1) {
+                linkStyle.href = 'style.css';
+                linkBootstrap.href = '';
+            } else if(valor == 2) {
+                linkStyle.href = 'style2.css';
+                linkBootstrap.href = 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
+            }
+        });
+    </script>
 </body>
 </html>

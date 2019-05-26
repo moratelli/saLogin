@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align:center;
 }
 
 /* Quando usamos o boxmodel, as bordas acabam engordando o 
@@ -22,12 +22,20 @@ código html. */
 }
 
 section#login-box {
-    background-color: orange;
+    background-image: url(https://media.giphy.com/media/10RhccNxPSaglW/giphy.gif);
     margin-top: 150px;
     margin-bottom: 20px;
     border: 1px solid black;
     border-radius: 10px;
     width: 400px;
+}
+
+/* Sombra para a direita, sombra para baixo, blur e cor */
+section#login-box header,
+section#login-box footer {
+    font-size: 1.1em;
+    color: orangered;
+    text-shadow: 1px 1px 1px darkgray;
 }
 
 form#login-form input {
@@ -57,20 +65,25 @@ section#login-box footer {
     margin: 20px;
 }
 
+section#login-box footer span:hover {
+    font-size: 1.2em;
+    color: sandybrown;
+    margin: 0px;
+}
+
 section#stylesSec {
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
     background-color: cornflowerblue;
     border: 1px solid black;
     border-radius: 10px;
+    padding: 5px 8px 0 8px;
 }
 
-ul#stylesUl {
-    list-style-type: none;
-    overflow: hidden;
+section#stylesSec ul {
+    padding-left: 0;
 }
 
 ul#stylesUl li {
-    display: inline-block;
-    list-style-image: none;
+    display: inline;
 }

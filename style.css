@@ -21,6 +21,10 @@ código html. */
             box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 section#login-box {
     background-image: url(https://media.giphy.com/media/10RhccNxPSaglW/giphy.gif);
     margin-top: 150px;
